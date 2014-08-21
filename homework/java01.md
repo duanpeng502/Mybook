@@ -1,5 +1,5 @@
 ###java01作业
- 一、选择题
+ #####一、选择题
 1．以下有关标识符说法正确的是：(C)
 
 A．任何字符的组合都可形成一个标识符。
@@ -185,7 +185,7 @@ B．注释不是程序的部分，因为编译系统忽略它们。
 
 C．注释是程序的组成部分。
 
-D．以上A）、B）说法正确，C）说法错误。
+D．以上A、B说法正确，C说法错误。
 
 20.下列的哪个选项可以正确用以表示八进制值8:
 
@@ -214,3 +214,31 @@ B. int a=12.0;
 C. int a=12.0f;
 
 D. int a=（int）12.0;
+#####二、填空题
+1．3.14156F 表示的是 【  】。
+2．阅读程序：
+
+	public class Test1
+  	{
+     	public static void  main(String args[])
+      	{
+         	System.out.println( 15/2);
+      	}
+  	}
+
+其执行结果是 【7】。
+
+3．设 a = 16，则表达式 a >>> 2 的值是 【4】。
+
+4．阅读程序：
+
+  	public class Test2
+  	{
+     	public static void  main(String args[])
+      	{
+         	int i=10,j=5,k=5;
+         	System.out.println(“i+j+k=”+ i+j+k);
+      	}
+  	}
+
+其执行结果是 【20】。
