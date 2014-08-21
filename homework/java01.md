@@ -1,5 +1,5 @@
 ###java01作业
- #####一、选择题
+#####一、选择题
 1．以下有关标识符说法正确的是：(C)
 
 A．任何字符的组合都可形成一个标识符。
@@ -244,3 +244,87 @@ D. int a=（int）12.0;
   	}
 
 其执行结果是 【20】。
+
+三、编程题
+
+1．编写一个应用程序，定义两个整型变量n1,n2。当n1=22，n2=64时计算输出n1+n2，n1-n2，n1*n2，n1/n2，n1%n2的值。
+
+	public class Test1 {
+
+		public static void main(String[] args) {
+			int n1=22;
+			int n2=64;
+			JOptionPane.showMessageDialog(null, "n1+n2的和："+(n1+n2));
+			JOptionPane.showMessageDialog(null, "n1-n2的值："+(n1-n2));
+			JOptionPane.showMessageDialog(null, "n1*n2的值："+(n1*n2));
+			JOptionPane.showMessageDialog(null, "n1/n2的值："+(n1/n2));
+			JOptionPane.showMessageDialog(null, "n1%n2的值："+(n1%n2));
+
+		}
+
+	}
+2．编写一个应用程序，定义两个整型变量n1,n2并赋给任意值。计算输出n1>n2，n1<n2，n1-n2>=0，n1-n2<=0，n1%n2= =0的值。
+
+	public class Test2 {
+
+		public static void main(String[] args) {
+			String str01= JOptionPane.showInputDialog("请输第n1的值");
+			int n1 = Integer.parseInt(str01);
+			String str02= JOptionPane.showInputDialog("请输第n2的值");
+			int n2 = Integer.parseInt(str02);
+			if(n1>n2){
+				JOptionPane.showMessageDialog(null, "n1>n2的值为:True");
+			}else{
+				JOptionPane.showMessageDialog(null,"n1>n2的值为:False");
+			}
+			if(n1<n2){
+				JOptionPane.showMessageDialog(null, "n1<n2的值为:True");
+			}else{
+				JOptionPane.showMessageDialog(null,"n1<n2值为:False");
+			}
+			if(n1-n2>0){
+				JOptionPane.showMessageDialog(null, "n1-n2>0的值为:True");
+			}else{
+				JOptionPane.showMessageDialog(null,"n1-n2>0值为:False");
+		}
+			if(n1-n2<0){
+				JOptionPane.showMessageDialog(null, "n1-n2<0的值为:True");
+			}else{
+				JOptionPane.showMessageDialog(null,"n1-n2<0值为:False");
+			}
+			if(n1%n2==0){
+				JOptionPane.showMessageDialog(null, "n1%n2==0的值为:True");
+			}else{
+			JOptionPane.showMessageDialog(null,"n1%n2==0值为:False");
+		}
+	}
+}
+
+
+
+3．编写一个应用程序，定义两个float 变量C、F。计算公式C=5/9（F-32），计算当F=60、F=90时，输出C 的值。
+	public class Test3 {
+
+		public static void main(String[] args) {
+			float C,F=60;
+			C= 5.0f/9*(F-32);
+			JOptionPane.showMessageDialog(null,"当F==60时C的值为:"+C);
+			F=90;
+			C= 5.0f/9*(F-32);
+			JOptionPane.showMessageDialog(null,"当F==90时C的值为:"+C);
+		}
+	}
+4．编写一个应用程序计算圆的周长和面积，设圆的半径为1.5，输出圆的周长和面积值。
+
+	public class Test4 {
+	 	public static final int PI = (int)3.14159;
+
+		public static void main(String[] args) {
+			float area,perimeter,r=1.5f;
+			perimeter=2*PI*r;
+			area=PI*r*r;
+			System.out.println("面积为:"+area);
+			System.out.println("周长为:"+perimeter);
+		}
+
+	}
