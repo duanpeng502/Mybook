@@ -64,17 +64,58 @@
 
 3.给出年份、月份，计算输出该月的天数 使用switch
 
-4.计算sum=1+2+3+4+5+…+100 使用for循环
-	public class Test4 {
+    public class Test3 {
 
-		public static void main(String[] args) {
-			int sum=0,i;
-			for(i=0;i<=100;i++){
-				sum=sum+i;
-			}
-			System.out.println("1到100的和为:"+sum);
-		}
-	}
+        public static void main(String[] args) {
+            //int day;
+            System.out.println("请输入年份：");
+            Scanner scanner = new Scanner(System.in);//输入操作
+            int year = scanner.nextInt();	
+            System.out.println("请输入月份：");
+            int month = scanner.nextInt();
+
+            switch(month){
+            case 1:
+            case 3:
+            case 5:
+            case 7:
+            case 8:
+            case 10:
+            case 12:
+                System.out.println("该月有31天");
+                break;
+            case 4:
+            case 6:
+            case 9:
+            case 11:
+                System.out.println("该月有30天");
+                break;
+            case 2:
+                if(year%4==0){
+                    System.out.println("该月有29天");
+                }else{
+                    System.out.println("该月有28天");
+                }
+                break;
+                default:
+                System.out.println("输入错误");
+            }
+            scanner.close();
+        }
+    }
+
+    4.计算sum=1+2+3+4+5+…+100 使用for循环
+
+        public class Test4 {
+
+            public static void main(String[] args) {
+                int sum=0,i;
+                for(i=0;i<=100;i++){
+                    sum=sum+i;
+                }
+                System.out.println("1到100的和为:"+sum);
+            }
+        }
 5.这是一个古典数学问题：一对兔子从它出生后第3个月起，每个月
 
 都生一对小兔子，小兔子3个月后又生一对小兔子，假设兔子都不死
@@ -84,6 +125,7 @@
 即从第3项开始，其该项是前两项之和。求100以内的波那契数列 分
 
 别使用for与while循环
+
 
 6.计算n!, 当n=9时。并分别输出1！~9！各阶乘的值 使用while循环
 
@@ -133,3 +175,26 @@
     }
 
 9.判断一个正整数是否是素数，若是计算其阶乘。判断素数和阶乘作为方法定义，并在主方法中调用它们
+    public class Test9 {
+
+        public static void main(String[] args) {
+            Scanner scanner = new Scanner(System.in);//输入操作
+            System.out.println("请输入一个数：");
+            int n=scanner.nextInt();
+            if (isPrime(n)){									//调用isPrime
+                System.out.println("该数不为素数");				
+            }else{			
+                int answer= n*n;			
+                System.out.println("该数为素数");
+                System.out.println(n+"的阶层为:"+answer);
+            }
+            scanner.close();
+        }
+        public static boolean isPrime(int n){
+            for(int i=2;i<=n/2;i++){
+                if(n%i==0)
+                    return true;					//判断是否为素数
+            }
+            return false;
+        }
+    }
