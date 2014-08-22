@@ -63,3 +63,73 @@
 	}
 
 3.给出年份、月份，计算输出该月的天数 使用switch
+
+4.计算sum=1+2+3+4+5+…+100 使用for循环
+	public class Test4 {
+
+		public static void main(String[] args) {
+			int sum=0,i;
+			for(i=0;i<=100;i++){
+				sum=sum+i;
+			}
+			System.out.println("1到100的和为:"+sum);
+		}
+	}
+5.这是一个古典数学问题：一对兔子从它出生后第3个月起，每个月
+
+都生一对小兔子，小兔子3个月后又生一对小兔子，假设兔子都不死
+
+，求每个月的兔子对数。该数列为：1  1  2  3  5  8  13 21…
+
+即从第3项开始，其该项是前两项之和。求100以内的波那契数列 分
+
+别使用for与while循环
+
+6.计算n!, 当n=9时。并分别输出1！~9！各阶乘的值 使用while循环
+
+	public class Test6 {
+
+		public static void main(String[] args) {
+			int n=1;
+			while(n<10){
+				int answer = n*n;
+				System.out.println(n + "阶层为:"+answer);
+				n++;
+			}
+		}
+	}
+
+7.输出50~100以内的所有素数。所谓素数即是只能被1和其自身除尽的正整数。
+
+    public class Test7 {
+
+        public static void main(String[] args) {
+            int i,j,n=0;
+            for(i=50;i<=100;i++){
+                for(j=2;j<=i/2;j++)
+                    if(i%j==0)
+                        break;
+                if(j>=i/2+1){
+                    if(n%6==1);
+                        System.out.println("素数为:"+i);
+                        n++;
+                }
+            }
+        } 
+    }
+
+
+8.输出10~1000之间既能被3整除也能被7整除的数
+
+    public class Test8 {
+
+        public static void main(String[] args) {
+            int i=0;
+            for(i=10;i<=1000;i++)
+                if(i%21==0)
+                System.out.println("既能被3又能被7整除的数："+i);
+                i++;
+            }
+    }
+
+9.判断一个正整数是否是素数，若是计算其阶乘。判断素数和阶乘作为方法定义，并在主方法中调用它们
