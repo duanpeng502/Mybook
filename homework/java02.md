@@ -126,6 +126,25 @@
 
 别使用for与while循环
 
+    public class Test5 {
+
+        public static void main(String[] args) {
+            calculate(1,1);				//传参
+        }
+        public static void calculate(int first,int second){
+            int result=first+second;
+            System.out.println("1:"+first);
+            System.out.println("2:"+second);
+            System.out.print("3:"+result);
+            for(int i=0;i<100;i++){
+                first=second;						// Fabaccic 算法
+                second=result;
+                result=first+second;
+                System.out.print(i+4+":"+result);
+            }
+        }
+    }
+
 
 6.计算n!, 当n=9时。并分别输出1！~9！各阶乘的值 使用while循环
 
